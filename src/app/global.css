@@ -1,0 +1,24 @@
+body {
+    background-color: black;
+    box-sizing: border-box;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+    color: ghostwhite;
+    font-size: 1.2em;
+}
+
+a {
+    text-decoration: none;
+    /*color: ghostwhite;*/
+}
+
+.mainContent {
+    background-color: purple;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: calc(100vw - 200px);
+}

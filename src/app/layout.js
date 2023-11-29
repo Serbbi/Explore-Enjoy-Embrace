@@ -1,8 +1,10 @@
-import Link from "next/link";
-import {Providers} from "@/app/providers";
-import {Flex} from "@chakra-ui/react";
-import {Sidebar} from "@/app/sidebar";
-import Footer from "@/app/footer";
+import {Sidebar} from "@/app/components/sidebar";
+import Footer from "@/app/components/footer";
+import './global.css'
+import styles from './layout.module.css'
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata = {
     title: 'Explore Enjoy Embrace',
@@ -12,18 +14,10 @@ export const metadata = {
 export default function RootLayout({children}) {
     return (
         <html>
-        <body>
-        <Providers>
-            <Flex
-                flexDirection="row"
-                height="100vh"
-                width="100%"
-            >
+        <body className={montserrat.className}>
             <Sidebar />
             {children}
             {/*<Footer />*/}
-            </Flex>
-        </Providers>
         </body>
         </html>
     )

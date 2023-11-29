@@ -1,0 +1,53 @@
+.card {
+    background-color: #3f3f3f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    gap: 20px;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    position: relative;
+}
+
+.card:hover {
+    background-color: #4f4f4f;
+}
+
+.cityName {
+    margin: 0;
+}
+
+.cityCountry {
+    margin: 0;
+}
+
+.heart {
+    position: absolute;
+    top: 10px; /* Adjust the top position */
+    left: 10px;
+}
+
+.heart:hover {
+    color: #ff8383;
+}
+
+.xmark {
+    position: absolute;
+    top: 10px; /* Adjust the top position */
+    right: 10px;
+    display: none;
+}
+
+.xmark:hover {
+    color: #363636;
+}
+
+.card:hover .xmark {
+    display: block;
+}
+
+
+

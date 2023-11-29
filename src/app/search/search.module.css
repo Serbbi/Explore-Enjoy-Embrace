@@ -1,0 +1,47 @@
+.cardListContainer {
+    height: calc(100% - 60px); /* Adjust the height of the container as needed */
+    overflow-y: auto; /* Enable vertical scrollbar */
+    padding: 10px; /* Optional: Add padding */
+}
+
+.cardList {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust the gap between cards */
+    justify-content: center; /* Horizontally center the cards */
+    align-items: center; /* Vertically center the cards */
+}
+
+.searchBar {
+    background-color: #4f4f4f;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    color: white;
+    width: 400px;
+}
+
+.searchButton {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: white;
+    font-size: 1.3em;
+}
+
+.searchButton:hover {
+    color: #ffd3d3;
+}
+
+.searchContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 30px 0;
+}
+
+/*.searchBar:focus {*/
+/*    outline: white;*/
+/*}*/
