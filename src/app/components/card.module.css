@@ -26,18 +26,33 @@
 
 .heart {
     position: absolute;
-    top: 10px; /* Adjust the top position */
+    top: 10px;
     left: 10px;
+}
+
+.heartSpecial {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #ff8383;
 }
 
 .heart:hover {
     color: #ff8383;
 }
 
+.heartSpecial:hover {
+    color: revert;
+}
+
 .xmark {
     position: absolute;
     top: 10px; /* Adjust the top position */
     right: 10px;
+    display: none;
+}
+
+.xmarkSpecial {
     display: none;
 }
 

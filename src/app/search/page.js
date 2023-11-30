@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import {useState} from "react";
 import Card from "@/app/components/card";
 import styles from "./search.module.css";
@@ -23,10 +22,25 @@ export default function Search() {
         }
     }
 
-    const deleteCity = (cityName) => {
-        console.log(`deleteCity: ${cityName}`);
-        // const newCities = cities.filter((city) => city['name'] !== cityName);
-        // setCities(newCities);
+    function deleteCity(id) {
+        const newCities = cities.filter((city) => {
+            return city['id'] !== id;
+        });
+        setCities(newCities);
+    }
+
+    function favoriteCity(id) {
+        const favoriteCity = cities.filter((city) => {
+            return city['id'] === id;
+        });
+        const c = {name: favoriteCity[0]['name'], country: favoriteCity[0]['country'], id_api: favoriteCity[0]['id']};
+        fetch('http://localhost:3000/api/city', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(c),
+        }).then().catch((error) => console.log(error));
     }
 
     return (
@@ -34,14 +48,18 @@ export default function Search() {
             <form action={searchCities} className={styles.searchContainer}>
                 <input name="city" placeholder="Where would you like to go?" className={styles.searchBar}/>
                 <button className={styles.searchButton}><FontAwesomeIcon icon={faMagnifyingGlass}/></button>
+                {/*<button className={styles.searchButton}><FontAwesomeIcon icon={faMagnifyingGlass}/></button>*/}
             </form>
             <div className={styles.cardListContainer}>
                 <ul className={styles.cardList}>
-                    <li><Card name={'Brasov'} country={'Romania'}/></li>
-                    <li><Card name={'Bucuresti'} country={'Romania'}/></li>
-                    <li><Card name={'Iasi'} country={'Romania'}/></li>
                     {cities.map((city) => (
-                        <li key={city['id']}><Card name={city['name']} country={city['country']} id={city['id']} deleteCity={deleteCity}/></li>
+                        <li key={city['id']}><Card
+                                                name={city['name']}
+                                                country={city['country']}
+                                                id={city['id']}
+                                                deleteCity={deleteCity}
+                                                favoriteCity={favoriteCity}
+                        /></li>
                     ))}
                 </ul>
             </div>

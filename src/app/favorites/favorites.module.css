@@ -1,0 +1,15 @@
+.cardListContainer {
+    height: calc(100% - 60px); /* Adjust the height of the container as needed */
+    overflow-y: auto; /* Enable vertical scrollbar */
+    padding: 10px; /* Optional: Add padding */
+}
+
+.cardList {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust the gap between cards */
+    justify-content: center; /* Horizontally center the cards */
+    align-items: center; /* Vertically center the cards */
+}

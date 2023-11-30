@@ -7,8 +7,6 @@ export default function City() {
     const cityId = pathname.split('/')[2].split('&')[1]
     const city = pathname.split('/')[2].split('&')[0]
 
-
-
     return (
         <div className={layoutStyles.mainContent}>
             <h1>{city}</h1>
