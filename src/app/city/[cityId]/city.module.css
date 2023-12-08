@@ -1,0 +1,31 @@
+.weatherChart {
+    width: 70%;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid #ccc; /* Border on top */
+    border-bottom: 1px solid #ccc; /* Border on bottom */
+}
+
+.navButton {
+    background-color: transparent; /* Transparent background for buttons */
+    border: none;
+    padding: 10px 12px; /* Padding inside buttons */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    font-family: "Roboto", sans-serif;
+    color: ghostwhite;
+    font-size: 16px;
+}
+
+.navButton:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+}
+
+.activeButton {
+    background-color: rgba(255, 255, 255, 0.4);
+    /*cursor: pointer;*/
+}

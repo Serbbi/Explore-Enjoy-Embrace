@@ -24,3 +24,16 @@ export async function GET(req, res) {
         res.status(500).json({message: "Database connection failed!"});
     }
 }
+
+export async function DELETE(req, res) {
+    const { searchParams } = new URL(req.url);
+    const id = searchParams.get('id');
+    try {
+        await connectToDatabase();
+        await City.deleteOne({id_api: id});
+        return NextResponse.json({message: "City deleted from favorites!"});
+    } catch (err) {
+        console.log(err);
+        res.status(500).json({message: "Database connection failed!"});
+    }
+}

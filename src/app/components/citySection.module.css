@@ -1,0 +1,13 @@
+.cardList {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust the gap between cards */
+    justify-content: center; /* Horizontally center the cards */
+    align-items: center; /* Vertically center the cards */
+}
+
+.sectionName {
+    text-align: left;
+}

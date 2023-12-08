@@ -10,12 +10,17 @@ export default function Favorites() {
     useEffect(() => {
         fetch('/api/city')
             .then((response) => response.json())
-            .then((data) => setCities(data));
+            .then((data) => setCities(data))
+            .catch((err) => console.log(err));
     }, []);
 
     function favoriteCity(id) {
         const newCities = cities.filter((city) => city['id_api'] !== id);
         setCities(newCities);
+        fetch(`/api/city?id=${id}`, {method: 'DELETE'})
+            .then((response) => response.json())
+            .then((data) => console.log(data))
+            .catch((err) => console.log(err));
     }
 
     return (
