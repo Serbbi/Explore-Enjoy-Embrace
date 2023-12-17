@@ -1,8 +1,10 @@
+import styles from '../city.module.css';
+
 export default function RestaurantContainer({ restaurants }) {
     const actualRestaurants = restaurants.filter((restaurant) => restaurant['address'] !== undefined);
 
     return (
-        <div>
+        <div className={styles.listWrapper}>
             {actualRestaurants.length > 0 &&
                 <ul>
                     {actualRestaurants.map((restaurant) => (

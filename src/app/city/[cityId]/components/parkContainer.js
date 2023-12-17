@@ -1,8 +1,10 @@
+import styles from '../city.module.css';
+
 export default function ParkContainer({ parks }) {
     const actualParks = parks.filter((park) => park['address'] !== undefined);
 
     return (
-        <div>
+        <div className={styles.listWrapper}>
             {actualParks.length > 0 &&
                 <ul>
                     {actualParks.map((park) => (

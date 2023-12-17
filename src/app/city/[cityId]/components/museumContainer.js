@@ -1,8 +1,10 @@
+import styles from '../city.module.css';
+
 export default function MuseumContainer({ museums }) {
     const actualMuseums = museums.filter((museum) => museum['address'] !== undefined);
 
     return (
-        <div>
+        <div className={styles.listWrapper}>
             {actualMuseums.length > 0 &&
                 <ul>
                     {actualMuseums.map((museum) => (

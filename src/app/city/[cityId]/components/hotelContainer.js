@@ -1,8 +1,10 @@
+import styles from '../city.module.css';
+
 export default function HotelContainer({ hotels }) {
     const actualHotels = hotels.filter((hotel) => hotel['address'] !== undefined);
 
     return (
-        <div>
+        <div className={styles.listWrapper}>
             {actualHotels.length > 0 &&
                 <ul>
                     {actualHotels.map((hotel) => (

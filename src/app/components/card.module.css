@@ -1,5 +1,7 @@
+
+
 .card {
-    background-color: #3f3f3f;
+    background-color: #363636;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,6 +12,8 @@
     height: 200px;
     cursor: pointer;
     position: relative;
+    text-decoration: none;
+    color: white;
 }
 
 .card:hover {

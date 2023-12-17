@@ -1,8 +1,10 @@
+import styles from '../city.module.css';
+
 export default function CafeContainer({ cafes }) {
     const actualCafes = cafes.filter((cafe) => cafe['address'] !== undefined);
 
     return (
-        <div>
+        <div className={styles.listWrapper}>
             {actualCafes.length > 0 &&
                 <ul>
                     {actualCafes.map((cafe) => (

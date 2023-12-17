@@ -1,7 +1,6 @@
 import styles from './home.module.css';
 import layoutStyle from './layout.module.css';
 
-
 export default function Home() {
 
     return (

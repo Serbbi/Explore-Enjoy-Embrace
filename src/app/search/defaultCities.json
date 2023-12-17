@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Paris",
+    "country": "France",
+    "id": "2988507"
+  },
+  {
+    "name": "Berlin",
+    "country": "Germany",
+    "id": "2950159"
+  },
+  {
+    "name": "London",
+    "country": "United Kingdom",
+    "id": "2643743"
+  },
+  {
+    "name": "New York",
+    "country": "United States",
+    "id": "5128581"
+  },
+  {
+    "name": "Tokyo",
+    "country": "Japan",
+    "id": "1850147"
+  }
+]
